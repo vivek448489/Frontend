@@ -1,0 +1,87 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Health Is Our Priority</h1>
+      <p>Experience world-class healthcare with our team of expert doctors and modern facilities</p>
+      <div class="hero-buttons">
+        <a routerLink="/appointment" class="cta-button primary">Book Appointment</a>
+        <a routerLink="/service" class="cta-button secondary">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stats-grid">
+      <div class="stat-item" *ngFor="let stat of stats">
+        <h3>{{stat.number}}</h3>
+        <p>{{stat.label}}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Comprehensive healthcare solutions for you and your family</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of services">
+        <div class="service-icon">{{service.icon}}</div>
+        <h3>{{service.name}}</h3>
+        <p>{{service.description}}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <section class="doctors">
+    <div class="section-header">
+      <h2>Meet Our Specialists</h2>
+      <p>Expert healthcare professionals at your service</p>
+    </div>
+    <div class="doctors-grid">
+      <div class="doctor-card" *ngFor="let doctor of doctors">
+        <div class="doctor-image-container">
+          <img [src]="doctor.image" [alt]="doctor.name" class="doctor-image">
+        </div>
+        <div class="doctor-info">
+          <h3>{{doctor.name}}</h3>
+          <p class="specialty">{{doctor.specialty}}</p>
+          <p class="experience">{{doctor.experience}}</p>
+          <p class="description">{{doctor.description}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <div class="section-header">
+      <h2>Why Choose HealthCare Plus</h2>
+      <p>Leading the way in modern healthcare services</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <h3>Expert Doctors</h3>
+        <p>Our team consists of highly qualified and experienced medical professionals</p>
+      </div>
+      <div class="feature">
+        <h3>Modern Technology</h3>
+        <p>State-of-the-art medical equipment and advanced treatment facilities</p>
+      </div>
+      <div class="feature">
+        <h3>24/7 Support</h3>
+        <p>Round-the-clock medical assistance and emergency services</p>
+      </div>
+      <div class="feature">
+        <h3>Affordable Care</h3>
+        <p>Quality healthcare services at competitive and transparent pricing</p>
+      </div>
+    </div>
+  </section>
+<app-faq></app-faq>
+<app-footer></app-footer>
+</div>

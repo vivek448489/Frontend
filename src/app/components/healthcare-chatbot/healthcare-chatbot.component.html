@@ -1,0 +1,90 @@
+<div class="chatbot-container">
+    <h1 class="main-title">Healthcare Assistant</h1>
+    
+    <div class="chat-window">
+      <!-- Chat Header -->
+      <div class="chat-header">
+        <div class="avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div class="header-info">
+          <h2>Healthcare Assistant</h2>
+          <div class="status">
+            <span class="status-dot" [class.online]="isOnline"></span>
+            <span class="status-text">{{ isOnline ? 'Online' : 'Offline' }}</span>
+          </div>
+        </div>
+        <div class="header-actions">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="1"></circle>
+            <circle cx="12" cy="5" r="1"></circle>
+            <circle cx="12" cy="19" r="1"></circle>
+          </svg>
+        </div>
+      </div>
+      
+      <!-- Chat Messages -->
+      <div class="messages-container" #messagesContainer>
+        <div *ngFor="let message of messages" 
+             class="message" 
+             [ngClass]="{'user-message': message.sender === 'user', 'bot-message': message.sender === 'bot'}">
+          <div class="message-avatar" *ngIf="message.sender === 'bot'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="message-content">
+            <div class="message-text">{{ message.text }}</div>
+            <div class="message-time">{{ formatTime(message.timestamp) }}</div>
+          </div>
+        </div>
+        <div *ngIf="isLoading" class="message bot-message">
+          <div class="message-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="message-content">
+            <div class="message-text typing-indicator">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Chat Input -->
+      <div class="chat-input">
+        <form (ngSubmit)="analyzeSymptoms()">
+          <div class="input-container">
+            <input 
+              type="text" 
+              [(ngModel)]="newMessage" 
+              name="newMessage" 
+              placeholder="Type your message here..." 
+              autocomplete="off"
+            >
+            <button type="button" class="attachment-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+              </svg>
+            </button>
+            <button type="submit" class="send-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 2-7 20-4-9-9-4Z"></path>
+                <path d="M22 2 11 13"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  

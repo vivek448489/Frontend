@@ -1,0 +1,36 @@
+<div class="doctors-container">
+  <h2>Our Doctors</h2>
+  
+  <div *ngIf="isLoading" class="loading">Loading doctors...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div *ngIf="!isLoading && !error" class="doctor-filters">
+    <button class="filter-btn" (click)="filterDoctors('All')">All Doctors</button>
+    <button class="filter-btn" (click)="filterDoctors('Cardiology')">Cardiology</button>
+    <button class="filter-btn" (click)="filterDoctors('Neurology')">Neurology</button>
+    <button class="filter-btn" (click)="filterDoctors('Pediatrics')">Pediatrics</button>
+    <button class="filter-btn" (click)="filterDoctors('Orthopedics')">Orthopedics</button>
+    <button class="filter-btn" (click)="filterDoctors('Dermatology')">Dermatology</button>
+    <button class="filter-btn" (click)="filterDoctors('General Medicine')">General Medicine</button>
+  </div>
+
+  <div *ngIf="!isLoading && !error" class="doctor-list">
+    <div class="doctor-card" *ngFor="let doctor of filteredDoctors">
+      <div class="doctor-card-inner">
+        <img [src]="doctor.imageUrl || 'https://via.placeholder.com/150'" alt="{{ doctor.name }}" class="doctor-image">
+        <div class="doctor-info">
+          <h3>{{ doctor.name }}</h3>
+          <p class="specialty">{{ doctor.specialty }}</p>
+          <p><strong>Education:</strong> {{ doctor.education }}</p>
+          <p><strong>Experience:</strong> {{ doctor.experience }} years</p>
+          <p><strong>Phone:</strong> {{ doctor.phoneNumber }}</p> <!-- Optional: Display phone number -->
+          <div class="doctor-actions">
+            <button class="book-btn" (click)="bookAppointment(doctor)">Book</button>
+            <button class="call-btn" routerLink="/ome">Call</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

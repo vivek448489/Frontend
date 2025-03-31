@@ -1,0 +1,173 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Wrapper Styling */
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?nature,landscape') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    
+  }
+  
+  /* Form container styling */
+  form {
+    background-color: rgba(235, 229, 229, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Header Styling */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Input Group Styling */
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    padding-left: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.7);
+  }
+  
+  .input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 18px;
+  }
+  
+  /* Button Styling */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* Forget Password Styling */
+  #forget {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  #forget:hover {
+    color: #0056b3;
+  }
+  
+  /* Social Login Section */
+  .social-login {
+    margin-top: 20px;
+  }
+  
+  .social-login p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .social-icons button {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Register Link Section */
+  .register-link {
+    margin-top: 20px;
+  }
+  
+  .register-link a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .register-link a:hover {
+    color: #0056b3;
+  }
+  
+  /* Animation */
+  form {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .bordert{
+    border-top: 1px solid #aaa;
+    position:relative;
+  }
+  .bordert:after{
+    content:"Or Connect with";
+    position:absolute;
+    top:-13px;
+    left:33%;
+    background-color: rgba(235, 229, 229, 0.7);
+    padding:0 8px;
+  }
+  

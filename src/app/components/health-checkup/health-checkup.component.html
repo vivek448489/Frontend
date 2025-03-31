@@ -1,0 +1,48 @@
+<div class="container py-5">
+    <!-- Search Section -->
+    <div class="search-container">
+      <input
+        type="text"
+        class="form-control search-input mb-4"
+        placeholder="Search By Packages"
+        [(ngModel)]="searchQuery"
+        (input)="onSearch()"
+      >
+      
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4">
+          <h2 class="mb-0">Find Checkup By Hospital</h2>
+        </div>
+        <div class="col-12 col-md-5 my-3 my-md-0">
+          <select class="form-select hospital-select">
+            <option selected>Filter by Hospital</option>
+            <option>Fortis Hospital, Bangalore</option>
+            <option>Fortis Hospital, Mumbai</option>
+            <option>Fortis Hospital, Delhi</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-3">
+          <button class="btn find-checkup-btn w-100">Find Checkup</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Categories Section -->
+    <section class="mt-5">
+      <h2 class="mb-4">Categories</h2>
+      <div class="row g-4">
+        @for (package of filteredPackages; track package.id) {
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="category-card p-4" (click)="onPackageClick(package)">
+              <div class="category-icon">
+                <i [class]="package.icon"></i>
+              </div>
+              <h5 class="mb-2">{{ package.name }}</h5>
+              <p class="price-text mb-0">Starting from ₹{{ package.startingPrice }}</p>
+              <!-- <p>{{description}}</p> -->
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+  </div>

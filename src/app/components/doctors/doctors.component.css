@@ -1,0 +1,117 @@
+.doctors-container {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.loading, .error {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ff0000;
+}
+
+.doctor-filters {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #00bcd4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #0097a7;
+}
+
+.doctor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.doctor-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 300px;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+
+.doctor-card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.doctor-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.doctor-info {
+    text-align: center;
+}
+
+.doctor-info h3 {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.specialty {
+    color: #00bcd4;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.doctor-actions {
+    margin-top: 1rem;
+}
+
+.book-btn, .call-btn {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.book-btn:hover {
+    background-color: #388e3c;
+}
+
+.call-btn {
+    background-color: #ff9800;
+    color: white;
+}
+
+.call-btn:hover {
+    background-color: #f57c00;
+}

@@ -1,0 +1,106 @@
+<div class="appointment-container">
+  <div class="form-card">
+    <h2>Book Your Appointment</h2>
+    <p class="subtitle">Fill out the form below to schedule your appointment with our specialists</p>
+
+    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()" class="appointment-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input 
+            id="fullName" 
+            type="text" 
+            formControlName="fullName" 
+            placeholder="Enter your full name"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input 
+            id="email" 
+            type="email" 
+            formControlName="email" 
+            placeholder="Enter your email"
+          >
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input 
+            id="phone" 
+            type="tel" 
+            formControlName="phone" 
+            placeholder="Enter your phone number"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department</label>
+          <select id="department" formControlName="department">
+            <option value="">Select Department</option>
+            <option *ngFor="let dept of departments" [value]="dept">{{dept}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="doctor">Preferred Doctor</label>
+          <input 
+            id="doctor" 
+            type="text" 
+            formControlName="doctor" 
+            placeholder="Enter doctor's name"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input 
+            id="date" 
+            type="date" 
+            formControlName="date"
+          >
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="time">Preferred Time</label>
+          <input 
+            id="time" 
+            type="time" 
+            formControlName="time"
+          >
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="symptoms">Symptoms</label>
+        <textarea 
+          id="symptoms" 
+          formControlName="symptoms" 
+          placeholder="Please describe your symptoms"
+          rows="4"
+        ></textarea>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="previousHistory">Previous Medical History (Optional)</label>
+        <textarea 
+          id="previousHistory" 
+          formControlName="previousHistory" 
+          placeholder="Any relevant medical history"
+          rows="3"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn" (click)="GoBack()">
+        Schedule Appointment
+      </button>
+    </form>
+  </div>
+</div>

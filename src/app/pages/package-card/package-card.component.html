@@ -1,0 +1,31 @@
+ <div class="package-card">
+      <div class="package-header">
+        <h3>{{ package.name }}</h3>
+        <span class="tests-count">{{ package.testsIncluded }} tests included</span>
+      </div>
+      
+      <div class="tests-list">
+        @for (test of package.tests; track test) {
+          <div class="test-item">
+            <span class="test-icon">✓</span>
+            {{ test }}
+          </div>
+        }
+      </div>
+      
+      <div class="package-footer">
+        <div class="hospital">
+          <span class="location-icon">📍</span>
+          {{ package.hospital }}
+        </div>
+        <div class="price">
+          <span class="price-label">Starting from</span>
+          <span class="price-amount">₹{{ package.price }}</span>
+        </div>
+      </div>
+      
+      <div class="actions">
+        <button class="btn-view">View Details</button>
+        <button class="btn-book" routerLink="/appointment">Book Now</button>
+      </div>
+    </div>

@@ -1,0 +1,52 @@
+    /* Hero Banner */
+    .hero-banner {
+        padding: 5rem 0;
+        background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      }
+  
+      /* Service Cards */
+      .service-img {
+        height: 200px;
+        object-fit: cover;
+      }
+  
+      .service-img-container {
+        position: relative;
+        overflow: hidden;
+      }
+  
+      .service-icon {
+        display: inline-block;
+      }
+  
+      .service-icon i {
+        font-size: 2rem;
+        color: var(--primary-color);
+      }
+  
+      .service-features {
+        list-style: none;
+        padding-left: 0;
+      }
+  
+      .service-features li {
+        margin-bottom: 0.5rem;
+      }
+  
+      /* Additional Services */
+      .additional-service-icon i {
+        font-size: 2rem;
+      }
+  
+      /* Insurance Section */
+      .insurance-section {
+        background-color: #f8f9fa;
+      }
+  
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(rgba(0, 119, 204, 0.9), rgba(0, 95, 170, 0.9)), url('https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 5rem 0;
+      }

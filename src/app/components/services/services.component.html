@@ -1,0 +1,208 @@
+<section class="hero-banner bg-primary-custom text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold mb-4">Our Healthcare Services</h1>
+          <p class="lead mb-4">
+            Comprehensive medical services designed to meet all your healthcare needs. Our team of experts uses the
+            latest technology and evidence-based practices to provide exceptional care.
+          </p>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block">
+          <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+               alt="Healthcare Services" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="mb-4">Exceptional Care For All Your Health Concerns</h2>
+          <p class="text-muted">
+            At HealthCare Pro, we offer a wide range of healthcare services to address various medical needs.
+            Our state-of-the-art facilities and experienced healthcare professionals ensure you receive the
+            highest quality care possible.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div *ngFor="let service of services" class="col-md-6 col-lg-4">
+          <div class="card h-100 service-card">
+            <div class="service-img-container">
+              <img [src]="service.image" [alt]="service.title" class="card-img-top service-img">
+            </div>
+            <div class="card-body p-4">
+              <div class="service-icon mb-3">
+                <i class="bi" [ngClass]="service.icon"></i>
+              </div>
+              <h3 class="h4 mb-3">{{ service.title }}</h3>
+              <p class="mb-4">{{ service.description }}</p>
+              <ul class="service-features mb-4">
+                <li *ngFor="let feature of service.features">
+                  <i class="bi bi-check-circle-fill me-2 text-primary-custom"></i>
+                  {{ feature }}
+                </li>
+              </ul>
+              <div class="text-center">
+                <a routerLink="/appointment" class="btn btn-primary-custom px-4">Book Service</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Services Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="mb-4">Additional Healthcare Solutions</h2>
+          <p class="text-muted">
+            In addition to our core services, we provide specialized healthcare solutions to meet specific needs.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm p-4">
+            <div class="d-flex align-items-center mb-4">
+              <div class="additional-service-icon me-4">
+                <i class="bi bi-house-heart-fill text-primary-custom"></i>
+              </div>
+              <h4 class="mb-0">Home Healthcare</h4>
+            </div>
+            <p>Our home healthcare services bring professional medical care to your doorstep. Ideal for patients recovering from surgery, managing chronic conditions, or those who have mobility challenges.</p>
+            <ul class="mb-0 ps-3">
+              <li>Skilled nursing care</li>
+              <li>Physical therapy at home</li>
+              <li>Medication management</li>
+              <li>Personalized care plans</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm p-4">
+            <div class="d-flex align-items-center mb-4">
+              <div class="additional-service-icon me-4">
+                <i class="bi bi-capsule text-primary-custom"></i>
+              </div>
+              <h4 class="mb-0">Pharmacy Services</h4>
+            </div>
+            <p>Our in-house pharmacy provides convenient access to prescriptions and over-the-counter medications. Our pharmacists work closely with your healthcare providers to ensure optimal medication management.</p>
+            <ul class="mb-0 ps-3">
+              <li>Prescription filling and refills</li>
+              <li>Medication counseling</li>
+              <li>Drug interaction checks</li>
+              <li>Home delivery options</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurance Info -->
+  <section class="section insurance-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="mb-4">Insurance and Payment Options</h2>
+          <p class="text-muted">
+            We accept a wide range of insurance plans and offer various payment options to make healthcare accessible to all.
+          </p>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="insurance-info p-5 bg-white rounded shadow">
+            <h4 class="mb-4">Accepted Insurance Plans</h4>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-4">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                  <span>Medicare</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                  <span>Medicaid</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                  <span>Blue Cross</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                  <span>Aetna</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                  <span>United Healthcare</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                  <span>Cigna</span>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="mb-4">Payment Options</h4>
+            <ul class="ps-3 mb-0">
+              <li>Credit/Debit Cards</li>
+              <li>Health Savings Accounts (HSA)</li>
+              <li>Flexible Spending Accounts (FSA)</li>
+              <li>Payment Plans</li>
+              <li>Cash/Check</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="text-center text-lg-start">
+            <h4 class="mb-4">Not Sure About Your Coverage?</h4>
+            <p class="mb-4">
+              Our financial counselors can help you understand your insurance coverage and out-of-pocket expenses.
+              We're committed to providing transparent pricing and helping you navigate the financial aspects of healthcare.
+            </p>
+            <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+              <a routerLink="/contact" class="btn btn-primary-custom px-4">Contact Us</a>
+              <a href="tel:+11234567890" class="btn btn-outline-primary px-4">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section text-white text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="mb-4">Ready to Schedule Your Service?</h2>
+          <p class="lead mb-5">
+            Take the first step towards better health. Schedule your appointment today and experience
+            the excellent care provided by our healthcare professionals.
+          </p>
+          <a routerLink="/appointment" class="btn btn-light btn-lg px-5 py-3">Book an Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>

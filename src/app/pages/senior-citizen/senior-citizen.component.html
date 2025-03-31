@@ -1,0 +1,49 @@
+
+<div class="back-button" (click)="goBack()">← Back</div>
+<div class="category-container">
+    <div class="category-header">
+      <h1>Senior-Citizen Packages</h1>
+      <p class="category-description">
+        Comprehensive health checkup packages designed for your overall well-being. Regular health monitoring for a healthier tomorrow.
+      </p>
+    </div>
+    
+    <div class="filters">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input 
+          type="text" 
+          placeholder="Search health packages" 
+        />
+      </div>
+      
+      <div class="filter-group">
+        <select>
+          <option value="">Age Group</option>
+          <option value="middle">31-50 years</option>
+          <option value="senior">Above 50 years</option>
+        </select>
+
+        <select>
+          <option value="">Package Type</option>
+          <option value="basic">Basic Checkup</option>
+          <option value="comprehensive">Comprehensive</option>
+          <option value="executive">Executive</option>
+          <option value="senior">Senior Citizen</option>
+        </select>
+
+        <select>
+          <option value="">Price Range</option>
+          <option value="0-5000">Under ₹5,000</option>
+          <option value="5000-10000">₹5,000 - ₹10,000</option>
+          <option value="10000+">Above ₹10,000</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="packages-grid">
+      @for (package of SeniorPackage; track package.id) {
+        <app-package-card [package]="package"></app-package-card>
+      }
+    </div>
+  </div>

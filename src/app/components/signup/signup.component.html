@@ -1,0 +1,75 @@
+<div class="wrapper">
+    <form [formGroup]="signUpForm">
+      <h1 style="color: rgb(53, 51, 51);">SignUp</h1>
+
+      <div class="input-group">
+        <input 
+          type="text" 
+          placeholder="FirstName" 
+          formControlName="FirstName"
+          required>
+        <i class="fa-regular fa-user"></i>
+      </div>
+      <div class="input-group">
+        <input 
+          type="text" 
+          placeholder="LastName" 
+          formControlName="LastName"
+          required>
+        <i class="fa-regular fa-user"></i>
+      </div>
+      <div class="input-group">
+        <input 
+          type="text" 
+          placeholder="Email" 
+          formControlName="Email"
+          name="Email" 
+          required>
+        <i class="fa-regular fa-user"></i>
+      </div>
+
+      <div class="input-group">
+        <input 
+          type="text" 
+          placeholder="Username" 
+          formControlName="Username"
+          required>
+        <i class="fa-regular fa-user"></i>
+      </div>
+  
+      <div class="input-group">
+        <input 
+          [type]="showPassword ? 'text' : 'password'" 
+          placeholder="Password" 
+          formControlName="Password"
+          required>
+        <i 
+          [class]="showPassword ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye'"
+          (click)="togglePassword()"
+          style="cursor: pointer;">
+        </i>
+      </div>
+
+  
+      <button type="submit" (click)="onSignUp()">SignUp</button>
+  
+      <div class="social-login">
+        <p style="color: black;" class="bordert"></p>
+        <div class="social-icons">
+          <button type="button" style="background: #DB4437;">
+            <a href="https://www.google.com"  class="fab fa-google" style="color: white;"></a>
+          </button>
+          <button type="button" style="background: #4267B2;">
+            <a href="https://www.facebook.com"  class="fab fa-facebook-f" style="color: white;"></a>
+          </button>
+          <button type="button" style="background: #333;">
+            <a href="https://www.github.com"  class="fab fa-github" style="color: white;"></a>
+          </button>
+        </div>
+      </div>
+  
+      <div class="register-link">
+        <p style="color: black;">Already have an account? <a id="forget" routerLink="/login">Login</a></p>
+      </div>
+    </form>
+  </div>

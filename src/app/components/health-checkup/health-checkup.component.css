@@ -1,0 +1,99 @@
+:host {
+    --primary-color: #00a651;
+    display: block;
+  }
+
+  .search-container {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+
+  .search-input {
+    margin-top: 40px;
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+    border: 1px solid #ddd;
+  }
+
+  .hospital-select {
+    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #ddd;
+  }
+
+  .find-checkup-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 30px;
+    padding: 0.75rem 2rem;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .find-checkup-btn:hover {
+    background-color: #008d44;
+  }
+
+  .category-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background: white;
+    height: 100%;
+  }
+
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .category-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 166, 81, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .category-icon i {
+    color: var(--primary-color);
+    font-size: 24px;
+  }
+
+  .price-text {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  h2.mb-4 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50; /* Deep gray-blue for a premium look */
+    text-align: center;
+    position: relative;
+    padding-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+  
+  h2.mb-4::before,
+  h2.mb-4::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color); /* Keeps the theme consistent */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  h2.mb-4::before {
+    width: 120px;
+    bottom: -6px;
+    opacity: 0.5;
+  }
+  

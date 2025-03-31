@@ -1,0 +1,46 @@
+<div class="back-button" (click)="goBack()">← Back</div>
+
+<div class="category-container">
+  <div class="category-header">
+    <h1>Pre-Conception Care Packages</h1>
+    <p class="category-description">
+      Take control of your diabetes management with our specialized healthcare packages. Regular monitoring and expert care for better health outcomes.
+    </p>
+  </div>
+
+  <div class="filters">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Search diabetes packages" />
+    </div>
+
+    <div class="filter-group">
+      <select>
+        <option value="">Package Type</option>
+        <option value="prevention">Prevention</option>
+        <option value="management">Management</option>
+        <option value="comprehensive">Comprehensive Care</option>
+      </select>
+
+      <select>
+        <option value="">Test Duration</option>
+        <option value="basic">Basic (1-2 hours)</option>
+        <option value="detailed">Detailed (2-4 hours)</option>
+        <option value="comprehensive">Comprehensive (4+ hours)</option>
+      </select>
+
+      <select>
+        <option value="">Price Range</option>
+        <option value="0-2500">Under ₹2,500</option>
+        <option value="2500-5000">₹2,500 - ₹5,000</option>
+        <option value="5000+">Above ₹5,000</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="packages-grid">
+    @for (package of preConceptionPackage; track package.id) {
+      <app-package-card [package]="package"></app-package-card>
+    }
+  </div>
+</div>

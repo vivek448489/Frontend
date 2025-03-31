@@ -1,0 +1,98 @@
+  <div class="about-container">
+      <section class="hero-section" [@fadeIn]>
+        <div class="container">
+          <div class="hero-content">
+            <h1>Advanced Healthcare for a Better Tomorrow</h1>
+            <p>Experience world-class medical care with our team of expert physicians and state-of-the-art facilities</p>
+            <a href="#appointment" class="cta-button">Schedule an Appointment</a>
+            <div class="accreditation-badges">
+              <img src="https://www.jointcommission.org/-/media/tjc/idev-imports/about-us/tjc_enterprise_rgb_300.png" alt="Joint Commission Accreditation" class="accreditation-logo">
+              <img src="https://www.hipaajournal.com/wp-content/uploads/2016/04/hipaa-compliance-checklist.png" alt="HIPAA Compliant" class="accreditation-logo">
+              <img src="https://www.medicare.gov/sites/default/files/medicare-gov.png" alt="Medicare Certified" class="accreditation-logo">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="values-section" data-aos="fade-up">
+        <div class="container">
+          <h2 class="section-title">Why Choose Us</h2>
+          <p class="section-subtitle">We combine advanced medical expertise with compassionate care to provide you with the best healthcare experience</p>
+          <div class="row">
+            <div class="col-md-4" *ngFor="let value of coreValues">
+              <div class="value-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="icon-wrapper">
+                  <i [class]="value.icon"></i>
+                </div>
+                <h3>{{value.title}}</h3>
+                <p>{{value.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section" data-aos="fade-up">
+        <div class="container">
+          <h2 class="section-title">Meet Our Expert Team</h2>
+          <p class="section-subtitle">Our board-certified physicians bring decades of experience and expertise in providing exceptional patient care</p>
+          <div class="team-grid">
+            <div class="team-card" *ngFor="let member of teamMembers" data-aos="zoom-in">
+              <div class="team-image">
+                <img [src]="member.image" [alt]="member.name">
+              </div>
+              <div class="team-info">
+                <h3>{{member.name}}</h3>
+                <p class="role">{{member.role}}</p>
+                <p class="credentials">{{member.credentials}}</p>
+                <div class="social-links">
+                  <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section" data-aos="fade-up">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3" *ngFor="let stat of statistics">
+              <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stat-icon">
+                  <i [class]="stat.icon"></i>
+                </div>
+                <h3 class="counter">{{stat.value}}</h3>
+                <p>{{stat.label}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials-section" data-aos="fade-up">
+        <div class="container">
+          <h2 class="section-title">Patient Stories</h2>
+          <p class="section-subtitle">Read what our patients say about their experience with our medical team</p>
+          <div class="row">
+            <div class="col-md-4" *ngFor="let testimonial of testimonials">
+              <div class="testimonial-card" data-aos="flip-up" data-aos-delay="100">
+                <div class="quote">"</div>
+                <p class="content">{{testimonial.content}}</p>
+                <div class="patient-info">
+                  <div class="patient-avatar">
+                    <img [src]="testimonial.avatar" [alt]="testimonial.name">
+                  </div>
+                  <div class="patient-details">
+                    <p class="name">{{testimonial.name}}</p>
+                    <p class="treatment">{{testimonial.treatment}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
