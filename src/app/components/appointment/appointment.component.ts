@@ -43,7 +43,7 @@ export class AppointmentComponent implements OnInit {
 
   onSubmit() {
     if (this.appointmentForm.valid) {
-      this.http.post('https://localhost:7028/api/appointment/generate-pdf', this.appointmentForm.value, {
+      this.http.post(' https://healthcare-plus-production.up.railway.app/api/appointment/generate-pdf', this.appointmentForm.value, {
         responseType: 'blob' // Important for handling binary files (PDF)
       }).subscribe((response: Blob) => {
         // Create a URL for the blob and open/download it

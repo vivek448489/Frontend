@@ -13,7 +13,7 @@ import { RouterLink } from '@angular/router';
 export class DoctorsComponent implements OnInit {
   doctors: any[] = [];
   filteredDoctors: any[] = [];
-  apiUrl = 'https://localhost:7028/api/Doctors'; // Replace with your actual backend URL (e.g., 'https://localhost:7028/api/Doctors')
+  apiUrl = 'https://healthcare-plus-production.up.railway.app/api/Doctors'; // Replace with your actual backend URL (e.g., 'https://localhost:7028/api/Doctors')
   isLoading = true;
   error: string | null = null;
 
